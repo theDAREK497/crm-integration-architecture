@@ -1,0 +1,8 @@
+graph TD
+    User[User] --> CRM[CRM system]
+    CRM --> Portal[Corporate Portal]
+    Portal --> DB[(Database)]
+    User --> Portal
+    classDef service fill:#FFD700,stroke:#333;
+    classDef component fill:#98FB98,stroke:#333;
+    class Portal,CRM,DB service;

@@ -1,0 +1,7 @@
+graph TD
+    main.py --> routers[Routers]
+    main.py --> models[Data models]
+    main.py --> services[Service Logic]
+    services --> db[Database]
+    classDef code fill:#FFB6C1,stroke:#333;
+    class routers,models,services,db code;

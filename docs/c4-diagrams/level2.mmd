@@ -1,0 +1,8 @@
+graph TD
+    Portal --> Auth[Authentication]
+    Portal --> DataSync[Data Synchronization]
+    Portal --> Reporting[Report generation]
+    DataSync --> CRM
+    Reporting --> DB[(PostgreSQL)]
+    classDef component fill:#87CEEB,stroke:#333;
+    class Auth,DataSync,Reporting component;
