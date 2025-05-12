@@ -21,7 +21,7 @@ cd crm-integration-architecture
 docker build -t crm-service .
 ```
 ### 3. Start the container
-````bash
+```bash
 docker run -p 8000:8000 crm-service
 ```
 ### 4. Open the Swagger documentation
