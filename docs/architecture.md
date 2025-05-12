@@ -18,7 +18,7 @@ graph TD
     classDef component fill:#98FB98,stroke:#333;
     class Portal,CRM,DB service;
 ```
-### ** Level 2: Component Diagram**
+### **Level 2: Component Diagram**
 ```mermaid
 graph TD
     Portal --> Auth[Authentication]
@@ -29,7 +29,7 @@ graph TD
     classDef component fill:#87CEEB,stroke:#333;
     class Auth,DataSync,Reporting component;
 ```
-Level 3: Code Structure
+### **Level 3: Code Structure**
 ```mermaid
 graph TD
     main.py --> routers[Routers]
