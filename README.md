@@ -15,7 +15,7 @@ Includes C4 Model diagrams, REST API (FastAPI) and Docker containerization.
 ```bash
 git clone https://github.com/ your-name/crm-integration-architecture.git
 cd crm-integration-architecture
-
+```
 ### 2. Build the Docker image
 ```bash
 docker build -t crm-service .
