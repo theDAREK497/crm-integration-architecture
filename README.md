@@ -35,14 +35,14 @@ MIT License
 
 
 #### **docs/architecture.md**
-```markdown
+
 ## Architecture Description
 
-## C4 Model Levels
+### C4 Model Levels
 1. **Level 1 (Context)**: Interaction between user, CRM system, and enterprise portal.
 2. **Level 2 (Components)**: Service modules (authentication, data synchronization, reports).
 3. **Level 3 (Code Structure)**: Routers, data models, and service logic.
 
-## REST API.
+### REST API.
 - **GET /users**: Returns a list of users.
 - **GET /docs**: Swagger documentation.
