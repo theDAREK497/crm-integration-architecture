@@ -7,7 +7,7 @@ Includes C4 Model diagrams, REST API (FastAPI) and Docker containerization.
 - **FastAPI** - for REST API creation
 - **Mermaid** - for C4 Model diagrams
 - **Docker** - for containerization
-- **Python 3.13** - programming language
+- **Python 3.11** - programming language
 
 ## Installation and startup
 
