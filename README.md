@@ -1,5 +1,7 @@
 # CRM Integration Architecture
 
+[![CI](https://github.com/theDAREK497/crm-integration-architecture/actions/workflows/ci.yml/badge.svg)](https://github.com/theDAREK497/crm-integration-architecture/actions/workflows/ci.yml)
+
 A compact architecture showcase for integrating a CRM with web or internal business systems.
 
 The repository combines **C4-style architecture documentation**, a minimal executable **FastAPI** service and **Docker** packaging.
@@ -13,6 +15,7 @@ The repository combines **C4-style architecture documentation**, a minimal execu
 - REST API boundary design;
 - typed request/response models with FastAPI and Pydantic;
 - containerization with Docker;
+- automated API tests, code quality and dependency security checks;
 - keeping an architecture example small enough to inspect quickly.
 
 ## Architecture
@@ -53,8 +56,11 @@ This keeps the code focused on the integration boundary while the repository's p
 - Python 3.11
 - FastAPI
 - Pydantic
+- Pytest
+- Ruff / Bandit / pip-audit
 - Mermaid / C4-style diagrams
 - Docker
+- GitHub Actions
 
 ## Run locally
 
@@ -81,12 +87,29 @@ Open the API documentation:
 http://localhost:8000/docs
 ```
 
+## Validation
+
+Install development dependencies and run:
+
+```bash
+python -m pip install -r requirements-dev.txt
+ruff check src tests
+python -m pytest -q
+bandit -r src -q
+pip-audit -r src/requirements.txt
+```
+
+CI also verifies that the Docker image builds successfully.
+
 ## Repository structure
 
 ```text
 src/
   main.py             minimal FastAPI example
-  requirements.txt    Python dependencies
+  requirements.txt    runtime dependencies
+tests/
+  test_api.py         API contract smoke tests
+requirements-dev.txt  development and quality tooling
 docs/
   architecture.md     architecture description
   c4-diagrams/        architecture diagrams
